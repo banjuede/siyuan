@@ -160,6 +160,7 @@ export class App {
                     bootSync();
                     fetchPost("/api/setting/getCloudUser", {}, userResponse => {
                         window.siyuan.user = userResponse.data;
+                        window.siyuan.user.userSiYuanOneTimePayStatus = 1;
                         onGetConfig(response.data.start, this);
                         account.onSetaccount();
                         setTitle(window.siyuan.languages.siyuanNote);

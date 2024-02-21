@@ -145,6 +145,7 @@ class App {
                     window.siyuan.menus = new Menus(this);
                     fetchPost("/api/setting/getCloudUser", {}, userResponse => {
                         window.siyuan.user = userResponse.data;
+                        window.siyuan.user.userSiYuanOneTimePayStatus = 1;
                         init(this);
                         setTitle(window.siyuan.languages.siyuanNote);
                         initMessage();

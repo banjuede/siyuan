@@ -94,6 +94,7 @@ class App {
                     initAssets();
                     fetchPost("/api/setting/getCloudUser", {}, userResponse => {
                         window.siyuan.user = userResponse.data;
+                        window.siyuan.user.userSiYuanOneTimePayStatus = 1;
                         fetchPost("/api/system/getEmojiConf", {}, emojiResponse => {
                             window.siyuan.emojis = emojiResponse.data as IEmoji[];
                             setNoteBook(() => {
