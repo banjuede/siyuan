@@ -22,14 +22,14 @@ export GOOS=darwin
 export GOARCH=amd64
 go build --tags fts5 -v -o "../app/kernel-darwin/SiYuan-Kernel" -ldflags "-s -w" .
 
-export GOOS=darwin
-export GOARCH=arm64
-go build --tags fts5 -v -o "../app/kernel-darwin-arm64/SiYuan-Kernel" -ldflags "-s -w" .
+# export GOOS=darwin
+# export GOARCH=arm64
+# go build --tags fts5 -v -o "../app/kernel-darwin-arm64/SiYuan-Kernel" -ldflags "-s -w" .
 cd ..
 
 echo 'Building Electron'
 cd app
 pnpm run dist-darwin
-echo 'Building Electron arm64'
-pnpm run dist-darwin-arm64
+# echo 'Building Electron arm64'
+# pnpm run dist-darwin-arm64
 cd ..

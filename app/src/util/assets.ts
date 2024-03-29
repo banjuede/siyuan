@@ -189,7 +189,7 @@ export const addGA = () => {
             para.subscriptionStatus = window.siyuan.user.userSiYuanSubscriptionStatus;
             para.subscriptionPlan = window.siyuan.user.userSiYuanSubscriptionPlan;
             para.subscriptionType = window.siyuan.user.userSiYuanSubscriptionType;
-            para.oneTimePayStatus = window.siyuan.user.userSiYuanOneTimePayStatus;
+            para.oneTimePayStatus = 1;
         }
         if (window.siyuan.config.sync) {
             para.syncEnabled = window.siyuan.config.sync.enabled;
